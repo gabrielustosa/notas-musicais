@@ -6,8 +6,13 @@ authors = ["Gabriel <lustosaki2@gmail.com>"]
 readme = "README.md"
 packages = [{include = "notas_musicais"}]
 
+[tool.poetry.scripts]
+escalas = "notas_musicais.cli:app"
+
 [tool.poetry.dependencies]
 python = "^3.10"
+typer = "^0.7.0"
+rich = "^13.3.5"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -36,7 +41,7 @@ profile = "black"
 line_length = 79
 
 [tool.taskipy.tasks]
-lint = "blue --check --diff . && isort --check --diff ."
+lint = "blue . && isort ."
 docs = "mkdocs serve"
 pre_test = "task lint"
 test = "pytest -s -x -vv --cov=notas_musicais"
