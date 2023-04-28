@@ -17,7 +17,7 @@ def _menor(cifra):
 
 def semitom(nota: str, *, intervalo: int) -> str:
     """
-    Calcula a distância em semitons para uma outra nota usando intervalos.
+    Calcula a distância em semitons para outra nota usando intervalos.
 
     Parameters:
         nota: Uma nota qualquer
