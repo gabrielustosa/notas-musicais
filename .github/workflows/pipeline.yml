@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    setps:
+    steps:
       - name: Copia os arquivos do repositório
         uses: actions/checkout@v3
 
